@@ -8,13 +8,43 @@
     <script id="sap-ui-bootstrap" 
          type="text/javascript"
          src="https://ui5.sap.com/resources/sap-ui-core.js"
-         data-sap-ui-theme="sap_fiori_3_dark"
+         data-sap-ui-theme="sap_horizon_dark"
          data-sap-ui-libs="sap.m"
          data-sap-ui-compatVersion="edge">
     </script>
 
+   <script>
+     var oLabel = new sap.m.Label();
+     oLabel.setText("Sistema Operacional");
+
+     var oTextOs = new sap.m.Text();
+     oTextOs.setText(sap.ui.Device.os.name);
+
+     var oLabelBrowser = new sap.m.Label();
+     oLabelBrowser.setText("Navegador");
+
+     var oTextBrowser = new sap.m.Text();
+     oTextBrowser.setText(sap.ui.Device.browser.name);
+      
+     var oVBox = new sap.m.VBox();
+      
+     oVBox
+          .addItem(oLabel)
+          .addItem(oTextOs)
+          .addItem(oLabelBrowser)
+          .addItem(oTextBrowser);
+
+      oVBox.placeAt("root");    
+
+    //  oLabel.placeAt("root");
+    //  oTextOs.placeAt("root");
+    //  oLabelBrowser.placeAt("root");
+    //  oTextBrowser.placeAt("root");
+
+   </script>
+
 </head>
-<body>
+<body id="root" class="sapUIBody">
     
 </body>
 </html>
